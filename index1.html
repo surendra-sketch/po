@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EED</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index1.css">
+</head>
+<body>
+    <!-- fa-th,fa-user,fa-evenlop -->
+   <div class="wrapper">
+    <div class="top">
+       <div class="navbar">
+           <div class="logo">
+               <img src="pictures/log1.png" alt="">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li class="active"><a href="#"><i class="fa fa-home"></i>Home</a></li>
+                    <li><a href="#"> <i class="fa fa-user"></i>About </a>
+                        <!-- <div class="ddmenu">
+                            <ul>
+                                <li><a href="#">Education</a></li>
+                                <li><a href="#">Education</a></li>
+                                <li><a href="#">Education</a></li>
+                                <li><a href="#">Education</a></li>
+                                <li><a href="#">Education</a></li>
+                                <li><a href="#">certificate</a></li>
+                            </ul>
+                        </div> -->
+                    </li>
+                    <li><a href="#"><i class="fa fa-th"></i>Portfolio </a></li>
+                    <li><a href="#"><i class="fa fa-envelope"></i>Contact </a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <a href="#"><i class="fa fa-search"></i></a>
+            </div>
+        </div>
+        </div>
+         
+</div> 
+<div class="mid">
+
+   </div>
+   <div class="bottom">
+
+   </div>
+
+   <script>
+    window.onscroll = function () { myFunction() };
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
+</body>
+</html>

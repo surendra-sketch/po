@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.4;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.top {
+  padding: 20px 0px;
+  width: 100%;
+  min-height: 100vh;
+  background: url("../pictures/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  /* filter: blur(8px); */
+}
+.mynav {
+  background-attachment: scroll;
+}
+.navbar {
+  width: 100%;
+  padding: 0px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.main-menu {
+  display: flex;
+  justify-content: space-around;
+}
+.main-menu ul {
+  display: flex;
+  float: left;
+  /* flex: 1; */
+  margin: 30px 0px 0px 10px;
+  position: relative;
+  padding-right: 10px;
+}
+.main-menu ul li {
+  padding: 0 5px;
+  height: 30px;
+}
+.main-menu ul li:hover {
+  background-color: #000;
+}
+.main-menu ul li a:hover {
+  color: #fff;
+}
+.main-menu ul .ddmenu ul {
+  display: block;
+}
+.main-menu ul .ddmenu ul li {
+  padding-left: 50px;
+  text-align: center;
+}
+.main-menu ul .ddmenu {
+  display: none;
+  background-color: #0ff;
+  position: absolute;
+  width: 200px;
+  text-align: center;
+  z-index: 1;
+  margin-left: -80px;
+  margin-top: 20px;
+}
+.main-menu ul .ddmenu:before {
+  content: " ";
+  position: absolute;
+  border: 30px solid;
+  border-color: transparent transparent #cdd transparent;
+  z-index: 9;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.main-menu ul li:hover .ddmenu {
+  display: block;
+}
+.main-menu .imge {
+  width: 90px;
+  height: 90px;
+}
+.main-menu img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+}
+.w3-row {
+  width: 100%;
+  background-color: #333;
+  text-align: center;
+}
+.w3-row:hover {
+}
+.w3-section {
+  border-bottom: 2px solid white;
+  color: #fff;
+  padding: 10px 0px;
+  font-size: 40px;
+}
+.w3-section:hover {
+  background-color: #000;
+}

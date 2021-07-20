@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/imageslider.css">
+    <title>Slider</title>
+</head>
+<body>
+<div class="container">
+    <div class="myslider">
+        <img src="pictures/webser1.png" alt="" id="lastclone">
+        <img src="pictures/webser2.jpeg" alt="">
+        <img src="pictures/webser3.jpeg" alt="">
+        <img src="pictures/webser4.jpeg" alt="">
+        <img src="pictures/webser5.jpeg" alt="">
+        <img src="pictures/webser1.png" alt="" id="firstclone">
+    </div>
+  </div>  
+    <button id="prevbtn" class="prev">prev</button>
+    <button id="nextbtn" class="next">next</button>
+
+
+    <script>
+const mysliderr =document.querySelector(".myslider");
+const mysliderimg = document.querySelectorAll(".myslider img");
+
+    const prevbtn = document.querySelector('#prevbtn');
+    const nextbtn = document.querySelector('#nextbtn');
+// counter
+
+let counter = 1;
+const size = mysliderimg[0].clientWidth;
+
+mysliderr.style.transform = 'translateX(' +(-size * counter) +'px)';
+
+// btn
+nextbtn.addEventListener('click',()=>{
+    if(counter >= mysliderimg.length -1) return ;
+  mysliderr.style.transition = 'transform 0.3s ease-in-out';
+ counter++;
+ mysliderr.style.transform = 'translateX(' + (-size * counter)+ 'px)';
+ 
+});
+prevbtn.addEventListener('click', () => {
+        if (counter <= 0) return;
+
+    mysliderr.style.transition = 'transform 0.3s ease-in-out';
+    counter--;
+    mysliderr.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+});
+
+mysliderr.addEventListener('transitionend',()=>{
+    if(mysliderimg[counter].id ==='lastclone'){
+        mysliderr.style.transition = 'none';
+        counter = mysliderimg.length  -2;
+     mysliderr.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+    }
+     if (mysliderimg[counter].id === 'firstclone') {
+        mysliderr.style.transition = 'none';
+        counter = mysliderimg.length - counter;
+        mysliderr.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+    }
+});    
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f55;
+}
+button {
+  padding: 10px;
+  cursor: pointer;
+}
+.container {
+  width: 60%;
+  margin: auto;
+  overflow: hidden;
+  border: 5px solid black;
+}
+.myslider {
+  display: flex;
+  max-width: 100%;
+}
+.myslider img {
+  max-width: 300%;
+  min-height: 100%;
+  padding: 20px;
+}
